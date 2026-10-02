@@ -1,0 +1,43 @@
+┌──(sangu㉿kali)-[~/phishing-task]
+└─$ cat ~/phishing-task/sample.eml     
+
+Return-Path: <bounce@mailchimp.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com [209.85.220.41])
+        by mx.google.com with SMTPS id x1234abcd
+        for <victim@example.com>
+        (Google Transport Security);
+        Mon, 30 Sep 2024 03:14:22 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce@mailchimp.com designates 209.85.220.41 as permitted sender)
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce@mailchimp.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=bounce@mailchimp.com;
+       dkim=pass header.i=@mailchimp.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mailchimp.com
+From: "Your Bank Security" <security@your-bank-alert.com>
+Reply-To: <verify-account@secure-bank-verify.ru>
+To: victim@example.com
+Subject: URGENT: Your Account Has Been Suspended - Verify Now
+Date: Mon, 30 Sep 2024 03:14:20 -0700
+Message-ID: <abc123xyz@mailchimp.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset="UTF-8"
+
+<html>
+<body>
+<p>Dear Valued Customer,</p>
+
+<p>We have detected <b>unusual activity</b> on your account. For your security, your account has been temporarily <b>suspended</b>.</p>
+
+<p>You must verify your identity <b>immediately</b> to restore access. If you do not verify within <b>24 hours</b>, your account will be permanently closed and any remaining funds may be forfeited.</p>
+
+<p>Click the link below to verify your account:</p>
+
+<p><a href="http://your-bank-alert.com.secure-verify-login.ru/account/verify">https://www.yourbank.com/verify-account</a></p>
+
+<p>Please have your account number, password, and PIN ready for verification.</p>
+
+<p>Thank you,<br>
+Your Bank Security Team</p>
+
+<p><i>This is an automated message. Please do not reply.</i></p>
+</body>
+</html>
